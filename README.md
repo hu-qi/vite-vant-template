@@ -1,10 +1,62 @@
 # Vue 3 + TypeScript + Vite
 
+## Step 0: Initial
+
 ```
 npm create vite@latest
 npm install
 npm run dev
 ```
+
+## Step 1: Formart and Lint
+
+- ESLint
+
+```
+# selected standard
+npx eslint --init
+```
+
+Add rules to .eslint.js:
+```
+'vue/no-multiple-template-root': 'off'
+```
+
+Add link script to package.json:
+```
+"lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
+"lint:fix": "eslint --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore --fix src"
+```
+
+- Prettier
+
+```
+npm install prettier eslint-config-prettier --save-dev
+```
+
+Add .prettierrc.js:
+```
+module.exports = {
+  // 超过100就换行
+  printWidth: 100,
+  // 不适用分号
+  semi: false,
+  // 使用单引号
+  singleQuote: true,
+  // 对象的最后一项加逗号
+  trailingComma: 'none'
+}
+```
+
+Add extends to .eslint.js:
+```
+'eslint:recommended',
+'plugin:vue/vue3-recommended',
+'prettier',
+```
+
+Link: [https://khalilstemmler.com/blogs/tooling/prettier/](https://khalilstemmler.com/blogs/tooling/prettier/)
+Link: [https://github.com/LZHD/vue-vite-h5](https://github.com/LZHD/vue-vite-h5)
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
