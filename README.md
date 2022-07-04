@@ -60,6 +60,54 @@ Link: [https://github.com/LZHD/vue-vite-h5](https://github.com/LZHD/vue-vite-h5)
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
+## Step 2: Vant and Viewport.
+
+- Add Vant
+
+```
+npm install vant
+```
+
+- Change `vite.config.ts`
+
+```javaScript
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import { createStyleImportPlugin, VantResolve } from 'vite-plugin-style-import'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+    createStyleImportPlugin({
+      resolves: [VantResolve()],
+      libs: [
+        {
+          libraryName: 'vant',
+          esModule: true,
+          // https://github.com/youzan/vant/issues/9957
+          resolveStyle: name => `/node_modules/vant/es/${name}/style`
+        }
+      ]
+    })
+  ]
+})
+
+```
+
+## Step 3: Vue Router 
+
+- Add Vue Router
+
+```
+npm install vue-router@4
+```
+
+- Vue Router Config    
+[Getting Started](https://router.vuejs.org/zh/guide/)
+
+
+
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
