@@ -17,7 +17,9 @@
       "@common/*": ["src/common/*"],
       "@components/*": ["src/components/*"],
       "@store/*": ["src/store/*"],
-      "@views/*": ["src/views/*"]
+      "@views/*": ["src/views/*"],
+      "@c/*": ["src/components/*"],
+      "@v/*": ["src/views/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],

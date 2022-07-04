@@ -106,7 +106,18 @@ npm install vue-router@4
 - Vue Router Config    
 [Getting Started](https://router.vuejs.org/zh/guide/)
 
+## Step 4: Axios
 
+- Add Axios
+
+```
+npm install axios
+```
+
+Customize your HTTP request by axios interceptors.
+In this step, we call the Github API to implement a simple Grid page.
+
+![Grid](https://s2.loli.net/2022/07/04/K83vIjX9hYBHlot.png)
 
 ## Recommended IDE Setup
 
