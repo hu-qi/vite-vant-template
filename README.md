@@ -119,6 +119,13 @@ In this step, we call the Github API to implement a simple Grid page.
 
 ![Grid](https://s2.loli.net/2022/07/04/K83vIjX9hYBHlot.png)
 
+## Step 5: Add pinia.
+
+```
+npm install pinia
+```
+[Pinia Guide](https://pinia.vuejs.org/introduction.html)
+
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)

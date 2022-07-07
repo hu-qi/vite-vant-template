@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import { Button, Toast, Card, Grid, GridItem } from 'vant'
+import { Button, Toast, Card, Grid, GridItem, Loading } from 'vant'
 
 export const setVant = (app: App) => {
   app
@@ -8,4 +8,5 @@ export const setVant = (app: App) => {
     .use(Card)
     .use(Grid)
     .use(GridItem)
+    .use(Loading)
 }
